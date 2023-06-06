@@ -12,11 +12,11 @@ public class Application implements HttpHandler {
         router.addRoute(method, path, handler);
     }
 
-    public void GET(String path, HandlerFunc handler) {
+    public void get(String path, HandlerFunc handler) {
         addRouter("GET", path, handler);
     }
 
-    public void Run(String addr) {
+    public void run(String addr) {
         String[] parts = addr.split(":");
         String host = parts[0];
         int port = Integer.parseInt(parts[1]);

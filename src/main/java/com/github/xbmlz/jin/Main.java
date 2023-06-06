@@ -7,9 +7,9 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
         Application app = new Application();
-        app.GET("/", (c) -> c.JSON(StatusCodes.OK, Map.of(
+        app.get("/", (c) -> c.json(StatusCodes.OK, Map.of(
                 "message", "Hello World"
         )));
-        app.Run(":8080");
+        app.run(":8080");
     }
 }
